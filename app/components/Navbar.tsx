@@ -35,7 +35,7 @@ const Navbar: React.FC = () => {
 
         <div className="flex-none text-center">
           <Link href="/" className="text-2xl md:text-3xl font-serif tracking-widest uppercase">
-            Elysian
+           JR Global Pathway
           </Link>
         </div>
 

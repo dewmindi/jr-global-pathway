@@ -16,21 +16,21 @@ const Hero: React.FC = () => {
         <Reveal>
           <motion.h1 
             whileHover={{ scale: 1.02 }}
-            className="text-5xl md:text-[5.2rem] font-serif leading-tight text-cream mb-8 cursor-default transition-transform duration-700"
+            className="text-5xl md:text-[5.2rem]  font-serif leading-tight text-cream mb-8 cursor-default transition-transform duration-700"
           >
-            Turn Your Migration <br /> Dreams Into Reality
+            Turn Your Migration  Dreams Into Reality
           </motion.h1>
         </Reveal>
 
-        <Reveal delay={0.5}>
-          <p className="text-xs md:text-sm font-sans uppercase tracking-[0.4em] text-cream/80 space-x-4">
+       
+          <motion.p className="text-xs md:text-sm font-sans uppercase tracking-[0.4em] text-white space-x-4">
             <span>Trusted Migration Experts</span>
             <span className="hidden md:inline">|</span>
             <span>Trusted Migration Experts</span>
             <span className="hidden md:inline">|</span>
             <span>Trusted Migration Experts</span>
-          </p>
-        </Reveal>
+          </motion.p>
+      
       </div>
 
       {/* Scroll Indicator */}
