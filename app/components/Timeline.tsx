@@ -47,7 +47,9 @@ const Timeline: React.FC = () => {
           {steps.map((step, i) => (
             <div 
               key={i} 
-              ref={(el) => (itemsRef.current[i] = el)}
+                  ref={(el) => {
+      itemsRef.current[i] = el;
+    }}
               className="relative md:pl-12 flex flex-col md:flex-row gap-8"
             >
               <div className="hidden md:flex absolute left-[-4px] top-2 w-2 h-2 rounded-full bg-[#4fd1c5] shadow-[0_0_10px_#4fd1c5]" />
