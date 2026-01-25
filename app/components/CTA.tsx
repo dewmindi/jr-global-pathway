@@ -18,11 +18,11 @@ const CTA: React.FC = () => {
           </p>
         </Reveal>
 
-        <Reveal delay={0.5} width="100%">
-          <button className="px-16 py-5 border-[0.5px] border-ebony text-xs uppercase tracking-[0.3em] font-sans hover:bg-ebony hover:text-cream transition-all duration-500">
+        {/* <Reveal delay={0.5} width="100%"> */}
+          <button className="px-10 text-white py-5 border-[0.5px] rounded-4xl border-ebony text-xs uppercase tracking-[0.3em] font-sans hover:bg-ebony hover:text-cream transition-all duration-500">
             Schedule a Private Consultation
           </button>
-        </Reveal>
+        {/* </Reveal> */}
       </div>
     </section>
   );

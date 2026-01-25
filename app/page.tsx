@@ -7,9 +7,12 @@ import Services from "./components/Services";
 import Destinations from "./components/Destinations";
 import CTA from "./components/CTA";
 import Footer from "./components/Footer";
+import WhyChooseUs from "./components/WhyChooseUs";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
+import Testimonials from "./components/Testimonials";
+import Timeline from "./components/Timeline";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -50,7 +53,10 @@ export default function Home() {
       <Hero/>
       <About/>
       <Services/>
+      <WhyChooseUs/>
+      <Timeline/>
       <Destinations/>
+      <Testimonials/>
       <CTA/>
       <Footer/>
     </div>

@@ -1,14 +1,29 @@
 
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 
 import { Reveal } from './Reveal';
 import { TESTIMONIALS } from '@/constants';
 
 const Testimonials: React.FC = () => {
+  const bgRef = useRef<HTMLDivElement>(null);
+
+  // Parallax effect for background
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!bgRef.current) return;
+      const scrollY = window.scrollY;
+      // Move background slower for depth (adjust multiplier for effect)
+      bgRef.current.style.transform = `translateY(${scrollY * 0.2}px)`;
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <section className="relative py-32 px-8 md:px-20 overflow-hidden">
-      {/* Cinematic Background Image for Testimonials */}
-      <div 
+      {/* Cinematic Parallax Background Image for Testimonials */}
+      <div
+        ref={bgRef}
         className="absolute inset-0 z-0 parallax-bg"
         style={{ backgroundImage: `url('https://picsum.photos/1920/1080?random=10')` }}
       />

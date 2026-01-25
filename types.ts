@@ -30,3 +30,10 @@ export interface Testimonial {
   role: string;
   text: string;
 }
+export interface WhyChooseUsItem {
+  id: string;
+  title: string;
+  description: string;
+  image: string;
+  metric: string;
+}

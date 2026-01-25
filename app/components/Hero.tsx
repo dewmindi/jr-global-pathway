@@ -1,13 +1,29 @@
 "use client";
-import React from 'react';
+
+import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Reveal } from './Reveal';
 
 const Hero: React.FC = () => {
+  const bgRef = useRef<HTMLDivElement>(null);
+
+  // Parallax effect for background
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!bgRef.current) return;
+      const scrollY = window.scrollY;
+      // Move background slower for depth (adjust multiplier for effect)
+      bgRef.current.style.transform = `translateY(${scrollY * 0.3}px)`;
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <section className="relative h-screen w-full flex flex-col items-center justify-center overflow-hidden">
-      {/* Cinematic Background */}
-      <div 
+      {/* Cinematic Parallax Background */}
+      <div
+        ref={bgRef}
         className="absolute inset-0 z-0 parallax-bg"
         style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://picsum.photos/1920/1080?random=1')` }}
       />

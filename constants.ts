@@ -1,4 +1,4 @@
-import { NavItem, Service, Destination, Testimonial } from "./types";
+import { NavItem, Service, Destination, Testimonial, WhyChooseUsItem } from "./types";
 
 
 
@@ -98,5 +98,42 @@ export const TESTIMONIALS: Testimonial[] = [
     name: 'Marcus Chen',
     role: 'Investor',
     text: 'Discretion and speed were my primary concerns. The team delivered on both fronts, securing our residency months ahead of schedule.'
+  }
+];
+export const WHY_CHOOSE_US: WhyChooseUsItem[] = [
+  {
+    id: '1',
+    title: 'Expert Consultants',
+    description: 'Our team comprises immigration lawyers, financial advisors, and relocation specialists with decades of combined experience navigating global migration pathways.',
+    image: 'https://picsum.photos/800/600?random=31',
+    metric: '50+ Countries'
+  },
+  {
+    id: '2',
+    title: 'Discretion Guaranteed',
+    description: 'We understand that privacy is paramount for high-net-worth individuals. All client information is protected under the strictest confidentiality agreements.',
+    image: 'https://picsum.photos/800/600?random=32',
+    metric: '99% Confidentiality'
+  },
+  {
+    id: '3',
+    title: 'Bespoke Solutions',
+    description: 'No two relocations are identical. We craft personalized strategies tailored to your unique financial, legal, and lifestyle requirements.',
+    image: 'https://picsum.photos/800/600?random=33',
+    metric: '100% Custom'
+  },
+  {
+    id: '4',
+    title: 'Fast-Track Processing',
+    description: 'Our established relationships with government agencies and immigration departments accelerate approval timelines without compromising compliance.',
+    image: 'https://picsum.photos/800/600?random=34',
+    metric: '3-6 Months Avg'
+  },
+  {
+    id: '5',
+    title: 'Lifetime Support',
+    description: 'Your partnership with us extends beyond approval. We provide ongoing immigration compliance, citizenship guidance, and renewal management.',
+    image: 'https://picsum.photos/800/600?random=35',
+    metric: 'Lifetime Access'
   }
 ];
