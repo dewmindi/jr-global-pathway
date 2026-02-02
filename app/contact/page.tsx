@@ -74,7 +74,7 @@ export default function ContactPage() {
                   <div className="space-y-2">
                     <label className="text-[10px] font-bold text-slate-500 uppercase ml-1">Additional Details</label>
                     <textarea 
-                      rows="4" 
+                      rows={4} 
                       placeholder="Tell us about your plans..."
                       className="w-full p-4 bg-gray-400/50 border border-slate-100 rounded-xl focus:outline-none focus:ring-2 focus:ring-ebony/10 transition-all font-mono text-sm"
                     ></textarea>
