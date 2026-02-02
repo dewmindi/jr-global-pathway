@@ -3,13 +3,13 @@ import { NavItem, Service, Destination, Testimonial, WhyChooseUsItem } from "./t
 
 
 export const LEFT_NAV_ITEMS: NavItem[] = [
-  { label: 'About', path: '/' },
+  { label: 'About', path: '/about' },
   { label: 'Services', path: '/services' },
 ];
 
 export const RIGHT_NAV_ITEMS: NavItem[] = [
   { label: 'Countries', path: '/countries' },
-  { label: 'Stories', path: '/stories' },
+  // { label: 'Stories', path: '/stories' },
   { label: 'Contact', path: '/contact' },
 ];
 

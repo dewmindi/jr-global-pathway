@@ -1,6 +1,7 @@
 "use client";
 import React from 'react';
 import { Reveal } from './Reveal';
+import Link from 'next/link';
 
 const CTA: React.FC = () => {
   return (
@@ -19,9 +20,11 @@ const CTA: React.FC = () => {
         </Reveal>
 
         {/* <Reveal delay={0.5} width="100%"> */}
-          <button className="px-10 text-white py-5 border-[0.5px] rounded-4xl border-ebony text-xs uppercase tracking-[0.3em] font-sans hover:bg-ebony hover:text-cream transition-all duration-500">
+        <Link href="/contact">
+          <button className="px-10 cursor-pointer text-white py-5 border-[0.5px] rounded-4xl border-ebony text-xs uppercase tracking-[0.3em] font-sans hover:bg-ebony hover:text-cream transition-all duration-500">
             Schedule a Private Consultation
           </button>
+        </Link>
         {/* </Reveal> */}
       </div>
     </section>

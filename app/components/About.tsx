@@ -1,11 +1,12 @@
 "use client";
 import React from 'react';
+import Link from 'next/link';
 import { Reveal } from './Reveal';
 
 
 const About: React.FC = () => {
   return (
-    <section className="py-32 px-8 md:px-20 bg-cream">
+    <section className="py-32 px-8 md:px-20 ">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
         <Reveal>
           <div className="relative overflow-hidden group">
@@ -31,9 +32,9 @@ const About: React.FC = () => {
           </Reveal>
 
           <Reveal delay={0.6}>
-            <button className="px-10 py-4 border-[0.5px] border-ebony text-xs uppercase tracking-[0.2em] font-sans hover:bg-ebony hover:text-cream transition-all duration-500">
+            <Link href="/about" className="px-10 py-4 border-[0.5px] border-ebony text-xs uppercase tracking-[0.2em] font-sans hover:bg-ebony hover:text-cream transition-all duration-500 inline-block">
               Discover Our Story
-            </button>
+            </Link>
           </Reveal>
         </div>
       </div>
