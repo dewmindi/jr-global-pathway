@@ -40,9 +40,7 @@ const Hero: React.FC = () => {
 
        
           <motion.p className="text-xs md:text-sm font-sans uppercase tracking-[0.4em] text-white space-x-4">
-            <span>Trusted Migration Experts</span>
-            <span className="hidden md:inline">|</span>
-            <span>Trusted Migration Experts</span>
+            <span>Specialists in Australia & New Zealand Immigration</span>
             <span className="hidden md:inline">|</span>
             <span>Trusted Migration Experts</span>
           </motion.p>

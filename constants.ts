@@ -16,25 +16,79 @@ export const RIGHT_NAV_ITEMS: NavItem[] = [
 export const SERVICES: Service[] = [
   {
     id: '1',
-    title: 'Executive Relocation',
+    title: 'Appeals, Refusals & Legal Matters',
+    points: [
+      'Tribunal and Court matters',
+      'Visa Refusals and Cancellations',
+      'Bridging Visas',
+    ],
     description: 'Bespoke migration solutions for C-suite professionals and their families.',
     image: 'https://picsum.photos/800/1000?random=11',
     metadata: { processTime: '3-6 Months', successRate: '99%' }
   },
   {
     id: '2',
-    title: 'Investor Visas',
+    title: 'Protection & Humanitarian Visas',
+        points: [
+      'Refugee, Humanitarian and Protection visas'
+    ],
     description: 'Strategic planning for Golden Visas and citizenship through investment.',
     image: 'https://picsum.photos/1200/800?random=12',
     metadata: { processTime: '6-12 Months', successRate: '98%' }
   },
   {
     id: '3',
-    title: 'Residency Programs',
+    title: 'Family & Relationship Visas',
+    points: [
+      'Partner visa',
+      'Prospective Marriage visa',
+      'Child visa',
+      'Parent Visa',
+      'Career Visa'
+    ],    
     description: 'Pathways to permanent residency in the world\'s most desirable locations.',
     image: 'https://picsum.photos/800/1200?random=13',
     metadata: { processTime: '9-18 Months', successRate: '95%' }
-  }
+  },
+    {
+    id: '4',
+    title: 'Visitor & Temporary Entry Visas',
+    points: [
+      'Visitor visa',
+      'Working Holiday / Work and Holiday visa',
+      'Employer Sponsored and Temporary Work visas',
+      'Training visa',
+      'Graduate visa'
+    ],    
+    description: 'Pathways to permanent residency in the world\'s most desirable locations.',
+    image: 'https://picsum.photos/800/1200?random=13',
+    metadata: { processTime: '9-18 Months', successRate: '95%' }
+  },
+   {
+    id: '5',
+    title: 'Skilled Migration Services',
+    points: [
+      'Skills Assessments',
+      'Skilled Independent visa',
+      'Skilled Employer Sponsored visa',
+      'Skilled Regional visa',
+      'Global Talent visa'
+    ],    
+    description: 'Pathways to permanent residency in the world\'s most desirable locations.',
+    image: 'https://picsum.photos/800/1200?random=13',
+    metadata: { processTime: '9-18 Months', successRate: '95%' }
+  },
+  {
+    id: '6',
+    title: 'Residency & Citizenship',
+    points: [
+      'Resident Return visa',
+      'Australian Citizenship',
+    ],    
+    description: 'Pathways to permanent residency in the world\'s most desirable locations.',
+    image: 'https://picsum.photos/800/1200?random=13',
+    metadata: { processTime: '9-18 Months', successRate: '95%' }
+  }    
 ];
 
 export const DESTINATIONS: Destination[] = [

@@ -21,13 +21,14 @@ const About: React.FC = () => {
         <div className="space-y-12">
           <Reveal>
             <h2 className="text-4xl md:text-5xl font-serif text-ebony leading-tight">
-              A Legacy of Precision <br /> and Global Freedom
+              Specialists in Australia &  <br /> New Zealand Immigration
             </h2>
           </Reveal>
           
           <Reveal delay={0.4}>
             <p className="text-lg font-sans font-light leading-relaxed text-ebony/70">
-              Founded on the principles of discretion and unparalleled expertise, Elysian Migration simplifies the complexities of global relocation. We don't just process applications; we curate life-changing transitions for those who demand the finest the world has to offer.
+              JR Global Pathways provides comprehensive immigration assistance across all major visa categories, appeals, and complex migration matters.
+               We support individuals, families, students, and employers with reliable, ethical, and results-driven guidance.
             </p>
           </Reveal>
 

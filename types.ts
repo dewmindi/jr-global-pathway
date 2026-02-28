@@ -7,6 +7,7 @@ export interface NavItem {
 export interface Service {
   id: string;
   title: string;
+  points: string[];
   description: string;
   image: string;
   metadata: {
