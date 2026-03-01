@@ -58,7 +58,7 @@ export const SoundProvider: React.FC<SoundProviderProps> = ({ children }) => {
 
   return (
     <SoundContext.Provider value={{ isSoundOn, toggleSound }}>
-      <audio ref={audioRef} src="/airplane-cabin1.mp3" loop />
+            <audio ref={audioRef} src="/airplane-cabin.mp3" />
       {children}
     </SoundContext.Provider>
   );

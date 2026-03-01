@@ -7,6 +7,7 @@ import ScrollWrapper from "./providers/SmoothScrollProvider";
 
 import { SoundProvider } from "@/app/contexts/SoundContext";
 import SoundToggle from "@/app/components/SoundToggle";
+import RouteChangeHandler from "@/app/components/RouteChangeHandler";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,6 +34,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <SoundProvider>
+          <RouteChangeHandler />
           <ScrollWrapper>{children}</ScrollWrapper>
           <SoundToggle />
         </SoundProvider>

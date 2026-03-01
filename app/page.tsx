@@ -13,6 +13,10 @@ import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import Testimonials from "./components/Testimonials";
 import Timeline from "./components/Timeline";
+import Loader from "./components/Loader";
+
+
+export const dynamic = "force-static";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -20,7 +24,7 @@ export default function Home() {
 
     useEffect(() => {
     // Simulate luxury initial load
-    const timer = setTimeout(() => setLoading(false), 1500);
+    const timer = setTimeout(() => setLoading(false), 5000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -28,24 +32,7 @@ export default function Home() {
     window.scrollTo(0, 0);
   }, [pathname]);
   if (loading) {
-    return (
-      <div className="fixed inset-0 bg-ebony flex flex-col items-center justify-center space-y-8">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          className="text-4xl font-serif text-cream uppercase tracking-widest"
-        >
-          JR Global Pathway
-        </motion.div>
-        <div className="w-12 h-[1px] bg-cream/20 relative overflow-hidden">
-          <motion.div 
-            animate={{ x: [-48, 48] }}
-            transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
-            className="absolute h-full w-full bg-white"
-          />
-        </div>
-      </div>
-    );
+    return <Loader />;
   }
   return (
     <div>

@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
       </div>
       
       <div className="mt-12 text-[8px] uppercase tracking-[0.5em] text-center font-sans opacity-50">
-        Curated by Senior Designer Dewmindi
+        Curated by Designer | Developer Dewmindi
       </div>
     </footer>
   );

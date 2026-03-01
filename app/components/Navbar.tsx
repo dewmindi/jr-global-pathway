@@ -6,6 +6,21 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { LEFT_NAV_ITEMS, RIGHT_NAV_ITEMS } from '@/constants';
 
 
+const HamburgerIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <line x1="3" y1="12" x2="21" y2="12"></line>
+    <line x1="3" y1="6" x2="21" y2="6"></line>
+    <line x1="3" y1="18" x2="21" y2="18"></line>
+  </svg>
+);
+
+const CloseIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <line x1="18" y1="6" x2="6" y2="18"></line>
+    <line x1="6" y1="6" x2="18" y2="18"></line>
+  </svg>
+);
+
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -46,9 +61,9 @@ const Navbar: React.FC = () => {
         {/* Mobile Toggle */}
         <button
           onClick={toggleMenu}
-          className="lg:hidden text-xs uppercase tracking-[0.2em] font-sans"
+          className="lg:hidden text-cream z-50"
         >
-          {isOpen ? 'Close' : 'Menu'}
+          {isOpen ? <CloseIcon /> : <HamburgerIcon />}
         </button>
       </nav>
 
@@ -60,7 +75,7 @@ const Navbar: React.FC = () => {
             animate={{ y: 0 }}
             exit={{ y: "-100%" }}
             transition={{ duration: 0.8, ease: [0.6, 0.05, -0.01, 0.9] }}
-            className="fixed inset-0 z-40 bg-ebony text-cream flex flex-col items-center justify-center space-y-8"
+            className="fixed inset-0 z-40 bg-black/50 backdrop-blur-sm text-cream flex flex-col items-center justify-center space-y-8"
           >
             {[...LEFT_NAV_ITEMS, ...RIGHT_NAV_ITEMS].map((item) => (
               <Link
