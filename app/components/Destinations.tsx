@@ -20,18 +20,18 @@ const Destinations: React.FC = () => {
           </Reveal>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 auto-rows-[300px] md:auto-rows-[400px] gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {DESTINATIONS.map((dest, index) => (
             <Reveal key={dest.id} width="100%" delay={index * 0.1}>
-              <div className={`relative h-full overflow-hidden group ${dest.span || ''}`}>
+              <div className="relative h-full overflow-hidden group aspect-square">
                 <img 
                   src={dest.image} 
                   alt={dest.name} 
                   className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-ebony/20 group-hover:bg-ebony/40 transition-colors duration-500" />
-                <div className="absolute bottom-6 left-6 right-6 flex flex-col justify-end">
-                  <h4 className="text-2xl font-serif text-cream mb-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-6 flex flex-col justify-end">
+                  <h4 className="text-2xl font-serif text-cream mb-2 translate-y-4 group-hover:translate-y-0 transition-transform duration-500 ease-in-out">
                     {dest.name}
                   </h4>
                   <div className="flex items-center justify-between text-[10px] uppercase tracking-widest text-cream/70 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pt-4 border-t border-cream/20">

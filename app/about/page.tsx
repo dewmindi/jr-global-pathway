@@ -1,5 +1,5 @@
 "use client";
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Reveal } from '../components/Reveal';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
@@ -18,13 +18,16 @@ const team = [
     { id: '3', name: 'Roy Sharan', role: 'Director / CEO / Founder', image: RoySharan },
 ];
 
+
 export default function AboutPage() {
     return (
         <main className="min-h-screen">
             <Navbar />
             {/* Hero */}
-
-            <section className="min-h-screen flex justify-center items-center px-8 text-center bg-ebony text-cream">
+            <section 
+                className="min-h-screen flex justify-center items-center px-8 text-center bg-ebony text-cream bsolute inset-0 z-0 parallax-bg"
+                style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('/JRglobal-Hero2.webp')` }}    
+            >
                 <Reveal width="100%">
                     <h1 className="text-5xl font-serif mb-4 uppercase tracking-[0.2em]">About JR Global Pathway</h1>
                     <p className="opacity-70 font-sans tracking-widest uppercase text-sm">We design tailored relocation programs for discerning individuals and families — combining legal precision, bespoke planning and lifelong support.</p>

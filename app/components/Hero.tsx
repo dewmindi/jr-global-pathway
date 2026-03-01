@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
       <div
         ref={bgRef}
         className="absolute inset-0 z-0 parallax-bg"
-        style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://picsum.photos/1920/1080?random=1')` }}
+        style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('/JRglobal-Hero1.webp')` }}
       />
 
       <div className="relative z-10 text-center px-6 max-w-5xl">

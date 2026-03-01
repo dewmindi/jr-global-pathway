@@ -56,7 +56,10 @@ export default function ServicesPage() {
     <main className="min-h-screen">
       <Navbar />
       
-      <section className="min-h-screen flex justify-center items-center px-8 text-center bg-ebony text-cream">
+      <section 
+        className="min-h-screen flex justify-center items-center px-8 text-center bg-ebony text-cream inset-0 z-0 parallax-bg"
+        style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('/JRglobal-Service.webp')` }}   
+      >
         <Reveal width="100%">
           <h1 className="text-5xl font-serif mb-4 uppercase tracking-[0.2em]">Our Migration Services</h1>
           <p className="opacity-70 font-sans tracking-widest uppercase text-sm">Comprehensive consultation services tailored to make your migration journey smooth, successful, and stress-free.</p>
