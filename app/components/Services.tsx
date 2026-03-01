@@ -21,7 +21,7 @@ const Services: React.FC = () => {
                   <img 
                     src={service.image} 
                     alt={service.title} 
-                    className="w-full h-full object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-100 group-hover:scale-105 transition-all duration-1000 ease-in-out"
+                    className="w-full h-full object-cover  brightness-75 group-hover:grayscale-0 group-hover:brightness-100 group-hover:scale-105 transition-all duration-1000 ease-in-out"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
                     <div className="flex justify-between text-[10px] uppercase tracking-widest font-sans border-t border-cream/20 pt-3">

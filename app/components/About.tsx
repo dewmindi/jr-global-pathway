@@ -11,9 +11,9 @@ const About: React.FC = () => {
         <Reveal>
           <div className="relative overflow-hidden group">
             <img 
-              src="https://picsum.photos/800/1000?random=5" 
+              src="/JRGlobal-images1.jpg" 
               alt="Luxury Office" 
-              className="w-full h-auto grayscale hover:grayscale-0 transition-all duration-1000 ease-in-out transform group-hover:scale-105"
+              className="w-full h-auto rounded-xl hover:grayscale-0 transition-all duration-1000 ease-in-out transform group-hover:scale-105"
             />
           </div>
         </Reveal>

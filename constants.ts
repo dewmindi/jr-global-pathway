@@ -1,7 +1,5 @@
 import { NavItem, Service, Destination, Testimonial, WhyChooseUsItem } from "./types";
 
-
-
 export const LEFT_NAV_ITEMS: NavItem[] = [
   { label: 'About', path: '/about' },
   { label: 'Services', path: '/services' },
@@ -23,7 +21,7 @@ export const SERVICES: Service[] = [
       'Bridging Visas',
     ],
     description: 'Bespoke migration solutions for C-suite professionals and their families.',
-    image: 'https://picsum.photos/800/1000?random=11',
+    image: '/AppealsLegalMatters.jpg',
     metadata: { processTime: '3-6 Months', successRate: '99%' }
   },
   {
@@ -33,7 +31,7 @@ export const SERVICES: Service[] = [
       'Refugee, Humanitarian and Protection visas'
     ],
     description: 'Strategic planning for Golden Visas and citizenship through investment.',
-    image: 'https://picsum.photos/1200/800?random=12',
+    image: '/ProtectionHumanitarianVisas.jpg',
     metadata: { processTime: '6-12 Months', successRate: '98%' }
   },
   {
@@ -47,7 +45,7 @@ export const SERVICES: Service[] = [
       'Career Visa'
     ],    
     description: 'Pathways to permanent residency in the world\'s most desirable locations.',
-    image: 'https://picsum.photos/800/1200?random=13',
+    image: '/FamilyRelationshipVisas.jpeg',
     metadata: { processTime: '9-18 Months', successRate: '95%' }
   },
     {
@@ -61,7 +59,7 @@ export const SERVICES: Service[] = [
       'Graduate visa'
     ],    
     description: 'Pathways to permanent residency in the world\'s most desirable locations.',
-    image: 'https://picsum.photos/800/1200?random=13',
+    image: '/VisitorTemporaryEntryVisas.jpeg',
     metadata: { processTime: '9-18 Months', successRate: '95%' }
   },
    {
@@ -75,7 +73,7 @@ export const SERVICES: Service[] = [
       'Global Talent visa'
     ],    
     description: 'Pathways to permanent residency in the world\'s most desirable locations.',
-    image: 'https://picsum.photos/800/1200?random=13',
+    image: '/SkilledMigrationServices.jpeg',
     metadata: { processTime: '9-18 Months', successRate: '95%' }
   },
   {
@@ -86,7 +84,7 @@ export const SERVICES: Service[] = [
       'Australian Citizenship',
     ],    
     description: 'Pathways to permanent residency in the world\'s most desirable locations.',
-    image: 'https://picsum.photos/800/1200?random=13',
+    image: '/ResidencyCitizenshipService.jpeg',
     metadata: { processTime: '9-18 Months', successRate: '95%' }
   }    
 ];
@@ -94,40 +92,48 @@ export const SERVICES: Service[] = [
 export const DESTINATIONS: Destination[] = [
   {
     id: '1',
-    name: 'Switzerland',
-    image: 'https://picsum.photos/800/800?random=21',
+    name: 'Canada',
+    image: '/Canada.jpg',
     priceRange: 'CHF 20k+',
     visaType: 'D-Visa',
     span: 'md:col-span-2 md:row-span-2'
   },
   {
     id: '2',
-    name: 'Portugal',
-    image: 'https://picsum.photos/800/600?random=22',
+    name: 'Australia',
+    image: '/Australia.jpg',
     priceRange: '€500k+',
     visaType: 'Golden Visa',
     span: 'md:col-span-1'
   },
   {
     id: '3',
-    name: 'Canada',
-    image: 'https://picsum.photos/600/800?random=23',
+    name: 'United Kingdom',
+    image: '/UK.jpg',
     priceRange: '$15k+',
     visaType: 'Express Entry',
     span: 'md:col-span-1 md:row-span-2'
   },
   {
     id: '4',
-    name: 'Singapore',
-    image: 'https://picsum.photos/800/800?random=24',
+    name: 'United States',
+    image: '/USA.jpg',
     priceRange: '$50k+',
     visaType: 'Employment Pass',
     span: 'md:col-span-1'
   },
   {
     id: '5',
-    name: 'Australia',
-    image: 'https://picsum.photos/800/600?random=25',
+    name: 'New Zealand',
+    image: '/NewZealand.jpg',
+    priceRange: '$20k+',
+    visaType: 'Subclass 189',
+    span: 'md:col-span-2'
+  },
+    {
+    id: '6',
+    name: 'Germany',
+    image: '/Germany.jpg',
     priceRange: '$20k+',
     visaType: 'Subclass 189',
     span: 'md:col-span-2'

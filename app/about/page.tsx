@@ -57,7 +57,7 @@ export default function AboutPage() {
                     <Reveal>
                         <div className="relative overflow-hidden group rounded-2xl">
                             <img
-                                src="https://picsum.photos/900/1100?random=5"
+                                src="/JRGlobal-images6.jpg"
                                 alt="Our story"
                                 className="w-full h-auto object-cover grayscale hover:grayscale-0 transition-all duration-1000 ease-in-out transform group-hover:scale-105 rounded-2xl"
                             />
