@@ -5,6 +5,9 @@ import { Reveal } from '../components/Reveal';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
+
+import ServiceImage from '../../public/ServiceImages.webp'
 
 const services = [
   {
@@ -14,7 +17,7 @@ const services = [
     destination: 'GLOBAL TALENT',
     title: 'Work Visa Consultation',
     description: 'Navigate the complex world of work visas with our expert guidance.',
-    image: 'https://picsum.photos/800/600?random=1',
+    image: ServiceImage,
     points: ['Skilled Worker Programs', 'Employer Sponsorship Assistance', 'Job Search Support & Resume Optimization', 'Work Permit Application & Processing', 'Credential Assessment & Skill Verification'],
   },
   {
@@ -24,7 +27,7 @@ const services = [
     destination: 'ACADEMIC EXCELLENCE',
     title: 'Study Visa Services',
     description: 'Pursue your educational dreams abroad with our comprehensive consultation.',
-    image: 'https://picsum.photos/800/600?random=2',
+    image: ServiceImage,    
     points: [
       'University & Course Selection Guidance',
       'Application & Admission Support',
@@ -40,7 +43,7 @@ const services = [
     destination: 'CITIZENSHIP PATH',
     title: 'Permanent Residency',
     description: 'Make your new country your permanent home with expert PR assistance.',
-    image: 'https://picsum.photos/800/600?random=3',
+    image: ServiceImage,    
     points: [
       'Express Entry & Points-Based Systems',
       'Provincial Nominee Programs (PNP)',
@@ -90,14 +93,16 @@ export default function ServicesPage() {
 
                 {/* LEFT SECTION: IMAGE (The "Window" View) */}
                 <div className="lg:w-1/3 relative h-64 lg:h-auto overflow-hidden">
-                  <img
+                  <Image
                     src={service.image}
                     alt={service.title}
-                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    layout="fill"
+                    objectFit="fill"
+                    className="transition-transform duration-700 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-r from-ebony/40 to-transparent lg:hidden" />
                   {/* Decorative Stamp Overlay */}
-                  <div className="absolute top-4 left-4 border-2 border-white/60 text-white/60 px-3 py-1 rounded uppercase text-[10px] font-bold rotate-[-15deg] backdrop-blur-sm">
+                  <div className="absolute top-4 left-4 border-2 border-red-500/60 text-black/60 px-3 py-1 rounded uppercase text-[10px] font-bold rotate-[-15deg] backdrop-blur-sm">
                     Verified Service
                   </div>
                 </div>

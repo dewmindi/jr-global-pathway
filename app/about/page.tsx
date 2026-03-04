@@ -12,10 +12,9 @@ import RoySharan from '../../public/RoySharan.webp'
 import CTA from '../components/CTA';
 
 const team = [
-    { id: '1', name: 'Joy Winston ', role: 'Founder & Managing director', image: JoyWinston },
+    { id: '1', name: 'Roy Sharan', role: 'Director / CEO / Founder', image: RoySharan },
     { id: '2', name: 'Kiara Roy', role: 'Founder & Director Operations ', image: KiaraRoy },
-
-    { id: '3', name: 'Roy Sharan', role: 'Director / CEO / Founder', image: RoySharan },
+    { id: '3', name: 'Joy Winston ', role: 'Founder & Managing director', image: JoyWinston },
 ];
 
 export const dynamic = "force-static";
