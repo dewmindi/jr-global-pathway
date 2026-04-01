@@ -2,7 +2,7 @@ import type { Metadata } from "next/types";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-import ScrollWrapper from "./providers/SmoothScrollProvider";
+import SmoothScrollProvider from "./providers/SmoothScrollProvider";
 
 
 import { SoundProvider } from "@/app/contexts/SoundContext";
@@ -35,7 +35,7 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <SoundProvider>
           <RouteChangeHandler />
-          <ScrollWrapper>{children}</ScrollWrapper>
+          <SmoothScrollProvider>{children}</SmoothScrollProvider>
           <SoundToggle />
         </SoundProvider>
       </body>

@@ -1,55 +1,74 @@
 
 import React, { useEffect, useRef } from 'react';
-
-import { Reveal } from './Reveal';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { TESTIMONIALS } from '@/constants';
 
 const Testimonials: React.FC = () => {
-  const bgRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start end", "end start"]
+  });
 
-  // Parallax effect for background
-  useEffect(() => {
-    const handleScroll = () => {
-      if (!bgRef.current) return;
-      const scrollY = window.scrollY;
-      // Move background slower for depth (adjust multiplier for effect)
-      bgRef.current.style.transform = `translateY(${scrollY * 0.2}px)`;
-    };
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  const y = useTransform(scrollYProgress, [0, 1], [-100, 100]);
 
   return (
-    <section className="relative py-32 px-8 md:px-20 overflow-hidden">
-      {/* Cinematic Parallax Background Image for Testimonials */}
-      <div
-        ref={bgRef}
-        className="absolute inset-0 z-0 parallax-bg"
-        style={{ backgroundImage: `url('https://picsum.photos/1920/1080?random=10')` }}
-      />
-      <div className="absolute inset-0 bg-ebony/60 z-1" />
+    <section ref={containerRef} className="relative py-40 px-8 md:px-20 overflow-hidden bg-ebony">
+      {/* Cinematic Parallax Background Image */}
+      <motion.div
+        style={{ y }}
+        className="absolute inset-0 z-0 opacity-30"
+      >
+        <div 
+          className="w-full h-[120%] bg-cover bg-center"
+          style={{ backgroundImage: `url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=2074&auto=format&fit=crop')` }}
+        />
+      </motion.div>
+      
+      <div className="absolute inset-0 bg-gradient-to-b from-ebony via-ebony/80 to-ebony z-1" />
 
       <div className="relative z-10 max-w-7xl mx-auto">
-        <Reveal>
-          <h2 className="text-center text-xs uppercase tracking-[0.5em] font-sans text-cream/60 mb-20">Client Stories</h2>
-        </Reveal>
+        <div className="mb-24 text-center space-y-4">
+          <span className="text-sienna uppercase tracking-[0.4em] text-[10px] font-bold block">Testimonials</span>
+          <h2 className="text-4xl md:text-6xl font-serif text-cream">Client Stories</h2>
+        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {TESTIMONIALS.map((t, index) => (
-            <Reveal key={t.id} delay={index * 0.2}>
-              <div className="glass p-10 h-full flex flex-col justify-between group hover:border-cream/40 transition-all duration-500">
-                <div className="mb-12">
-                  <div className="text-cream/30 text-6xl font-serif mb-4 group-hover:text-sienna transition-colors duration-500">“</div>
-                  <p className="text-lg font-sans font-light leading-relaxed text-cream/80 italic">
-                    {t.text}
-                  </p>
+            <motion.div
+              key={t.id}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: index * 0.1 }}
+              className="group relative h-[500px] bg-white/5 border border-white/10 rounded-3xl p-10 flex flex-col justify-between hover:bg-white/10 transition-all duration-500 hover:-translate-y-2"
+            >
+              {/* background quotes */}
+              <div className="absolute top-4 right-8 text-8xl font-serif text-white/[0.03] select-none group-hover:text-sienna/10 transition-colors">
+                “
+              </div>
+
+              <div className="space-y-8">
+                <div className="w-12 h-12 rounded-2xl bg-sienna/20 flex items-center justify-center border border-sienna/30">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-sienna">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
                 </div>
-                <div className="border-t border-cream/10 pt-6">
-                  <p className="text-cream font-serif text-xl">{t.name}</p>
-                  <p className="text-[10px] uppercase tracking-widest text-cream/40 mt-1">{t.role}</p>
+                
+                <p className="text-lg font-light leading-relaxed text-cream/70 italic group-hover:text-cream transition-colors duration-500">
+                  {t.text}
+                </p>
+              </div>
+
+              <div className="space-y-6">
+                <div className="w-full h-px bg-white/10" />
+                <div className="flex flex-col">
+                  <span className="text-xl font-serif text-cream">{t.name}</span>
+                  <span className="text-[10px] uppercase tracking-[0.3em] text-sienna font-bold mt-2">{t.role}</span>
                 </div>
               </div>
-            </Reveal>
+            </motion.div>
           ))}
         </div>
       </div>
@@ -58,3 +77,4 @@ const Testimonials: React.FC = () => {
 };
 
 export default Testimonials;
+

@@ -46,16 +46,17 @@ const WhyChooseUs: React.FC = () => {
   }, []);
 
   return (
-    <section ref={containerRef} style={{ height: dynamicHeight }} className="relative bg-cream">
+    <section ref={containerRef} style={{ height: dynamicHeight }} className="relative bg-ebony">
       <div ref={stickyRef} className="sticky top-0 flex h-screen flex-col justify-center overflow-hidden py-32 px-8 md:px-20">
-        <Reveal>
-            <h2 className="text-xs uppercase tracking-[0.5em] font-sans mb-4 opacity-60 text-ebony">Why Choose Us</h2>
-            <h3 className="text-4xl md:text-6xl font-serif text-ebony mb-20">Unparalleled Excellence</h3>
-          </Reveal>
+        <div className="mb-16">
+          <span className="text-sienna uppercase tracking-[0.4em] text-[10px] font-bold block mb-4">Why Choose Us</span>
+          <h3 className="text-4xl md:text-6xl font-serif text-cream">Unparalleled Excellence</h3>
+        </div>
+
         <motion.div
           ref={scrollRef}
           style={{ x }}
-          className="flex gap-12 md:gap-20"
+          className="flex gap-8"
         >
           {WHY_CHOOSE_US.map((item, index) => (
             <motion.div
@@ -64,36 +65,34 @@ const WhyChooseUs: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="flex-shrink-0 w-full md:w-96"
+              className="shrink-0 w-[400px]"
             >
-              <div className="bg-white/6 backdrop-blur-md border border-cream/10 rounded-2xl p-8 h-full flex flex-col justify-between">
-                {/* <div className="relative overflow-hidden mb-8 aspect-[4/3] rounded-lg">
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 ease-in-out group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-ebony/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                </div> */}
-
+              <div className="group relative h-[350px] bg-white/5 border border-white/10 rounded-3xl p-10 flex flex-col justify-between hover:bg-white/10 transition-all duration-500 hover:-translate-y-2">
+                {/* Background Number */}
+                <div className="absolute top-4 right-8 text-7xl font-serif text-white/[0.03] select-none group-hover:text-sienna/10 transition-colors">
+                  0{index + 1}
+                </div>
+                
                 <div className="space-y-4">
-                  <h4 className="text-2xl font-serif text-ebony group-hover:text-sienna transition-colors duration-300">
+                  <h4 className="text-2xl font-serif text-cream group-hover:text-sienna transition-colors duration-300">
                     {item.title}
                   </h4>
-                  <p className="font-sans text-ebony/60 font-light leading-relaxed text-sm md:text-base">
+                  <div className="w-12 h-px bg-sienna/50 group-hover:w-full transition-all duration-700" />
+                  <p className="font-sans text-cream/60 font-light leading-relaxed text-sm">
                     {item.description}
                   </p>
-                  <div className="flex items-center space-x-2 text-xs uppercase tracking-widest font-sans text-ebony/50">
-                    <span>{item.metric}</span>
-                  </div>
+                </div>
+
+                <div className="flex items-center space-x-2 text-[10px] uppercase tracking-[0.3em] font-sans text-sienna font-bold">
+                  <span>{item.metric}</span>
                 </div>
               </div>
             </motion.div>
           ))}
         </motion.div>
 
-        <div className="mt-16 text-center">
-          <p className="text-xs uppercase tracking-[0.3em] font-sans text-ebony/50">
+        <div className="mt-16 text-start">
+          <p className="text-[10px] uppercase tracking-[0.5em] font-sans text-cream/30">
             Scroll to explore our advantages
           </p>
         </div>

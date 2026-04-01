@@ -27,10 +27,10 @@ export default function ContactPage() {
       <section className="pb-20 px-4 md:px-20">
         <div className="max-w-5xl mx-auto">
           <Reveal>
-            <div className="flex flex-col lg:flex-row  rounded-[2rem] overflow-hidden shadow-2xl relative ">
+            <div className="flex flex-col lg:flex-row  rounded-4xl overflow-hidden shadow-2xl relative ">
               
               {/* LEFT SECTION: THE FORM (Passenger Info) */}
-              <div className="flex-[2] p-8 md:p-12 bg-slate-100">
+              <div className="flex-2 p-8 md:p-12 bg-slate-100">
                 <div className="flex justify-between items-center mb-10 border-b border-slate-100 pb-6">
                   <div>
                     <p className="text-[10px] font-bold text-black uppercase tracking-widest mb-1">Document Type</p>
@@ -105,15 +105,15 @@ export default function ContactPage() {
                       <div className="flex items-start gap-3 text-black">
                         <div className="w-8 h-8 rounded bg-ebony/5 flex items-center justify-center text-ebony">📍</div>
                         <div>
-                          <p className="text-[10px] font-bold text-slate-400 uppercase">Terminal</p>
-                          <p className="text-xs font-mono">Main St. 101, NY</p>
+                          <p className="text-[10px] font-bold text-slate-400 uppercase">Address</p>
+                          <p className="text-xs font-mono">2/2 Bandaranayake Mawatha, Mattumagala, Ragama 11010, Sri Lanka</p>
                         </div>
                       </div>
                                             <div className="flex items-start gap-3 text-black">
                         <div className="w-8 h-8 rounded bg-ebony/5 flex items-center justify-center text-ebony">📞</div>
                         <div>
                           <p className="text-[10px] font-bold text-slate-400 uppercase">Phone</p>
-                          <p className="text-xs font-mono">+1 (555) 123-4567</p>
+                          <p className="text-xs font-mono">+94 77 694 8179</p>
                         </div>
                       </div>
                     </div>
@@ -127,9 +127,9 @@ export default function ContactPage() {
 
                 <div className="space-y-4">
                   <div className="bg-white p-3 border border-slate-200 rounded-lg">
-                     <div className="w-full h-8 flex gap-[1px] items-center overflow-hidden opacity-60">
+                     <div className="w-full h-8 flex gap-px items-center overflow-hidden opacity-60">
                         {[...Array(30)].map((_, i) => (
-                          <div key={i} className={`bg-slate-800 h-full ${i % 5 === 0 ? 'w-[2px]' : 'w-[0.5px]'}`} />
+                          <div key={i} className={`bg-slate-800 h-full ${i % 5 === 0 ? 'w-0.5' : 'w-[0.5px]'}`} />
                         ))}
                       </div>
                       <p className="text-[7px] font-mono mt-1 text-center text-slate-400">CONTACT-DOC-77890</p>

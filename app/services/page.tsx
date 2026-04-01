@@ -6,8 +6,10 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { additionalServices } from './servicesData';
 
 import ServiceImage from '../../public/ServiceImages.webp'
+import CTA from '../components/CTA';
 
 const services = [
   {
@@ -89,7 +91,7 @@ export default function ServicesPage() {
         <div className="max-w-6xl mx-auto space-y-16">
           {services.map((service, index) => (
             <Reveal key={service.id} delay={index * 0.2}>
-              <div className="flex flex-col lg:flex-row bg-[#121212] rounded-[2rem] overflow-hidden shadow-2xl relative ">
+              <div className="flex flex-col lg:flex-row bg-[#121212] rounded-4xl overflow-hidden shadow-2xl relative ">
 
                 {/* LEFT SECTION: IMAGE (The "Window" View) */}
                 <div className="lg:w-1/3 relative h-64 lg:h-auto overflow-hidden">
@@ -100,7 +102,7 @@ export default function ServicesPage() {
                     objectFit="fill"
                     className="transition-transform duration-700 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-r from-ebony/40 to-transparent lg:hidden" />
+                  <div className="absolute inset-0 bg-linear-to-r from-ebony/40 to-transparent lg:hidden" />
                   {/* Decorative Stamp Overlay */}
                   <div className="absolute top-4 left-4 border-2 border-red-500/60 text-black/60 px-3 py-1 rounded uppercase text-[10px] font-bold rotate-[-15deg] backdrop-blur-sm">
                     Verified Service
@@ -157,9 +159,9 @@ export default function ServicesPage() {
 
                     {/* Barcode */}
                     <div className="bg-white p-4 border border-slate-200 rounded flex flex-col items-center">
-                      <div className="w-full h-10 flex gap-[2px] items-center overflow-hidden">
+                      <div className="w-full h-10 flex gap-px items-center overflow-hidden">
                         {[...Array(25)].map((_, i) => (
-                          <div key={i} className={`bg-slate-800 h-full ${i % 4 === 0 ? 'w-[3px]' : 'w-[1px]'}`} />
+                          <div key={i} className={`bg-slate-800 h-full ${i % 4 === 0 ? 'w-3px' : 'w-px'}`} />
                         ))}
                       </div>
                       <p className="text-[8px] font-mono mt-2 text-slate-400 tracking-widest">#{service.id}00-PASS</p>
@@ -178,6 +180,78 @@ export default function ServicesPage() {
           ))}
         </div>
       </section>
+
+      {/* Additional Services Section */}
+      <section className="py-24 px-6 md:px-20 bg-ebony text-cream overflow-hidden">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
+            <div className="space-y-4">
+              <span className="text-sienna uppercase tracking-[0.4em] text-[10px] font-bold">Extended Support</span>
+              <h2 className="text-4xl md:text-5xl font-serif">Additional Services</h2>
+            </div>
+            <p className="max-w-md text-cream/60 text-sm font-light leading-relaxed">
+              Beyond the initial application, we provide specialized support for every nuance of your global transition.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {additionalServices.map((service, index) => (
+              <Reveal key={service.id} delay={index * 0.1}>
+                <div className="group relative h-112.5 bg-white/5 border border-white/10 rounded-3xl p-8 flex flex-col justify-between hover:bg-white/10 transition-all duration-500 hover:-translate-y-2">
+                  {/* Background Number */}
+                  <div className="absolute top-4 right-8 text-8xl font-serif text-white/20 select-none group-hover:text-sienna/10 transition-colors">
+                    0{service.id}
+                  </div>
+                  
+                  <div>
+                    <div className="w-12 h-12 rounded-2xl bg-sienna/20 flex items-center justify-center mb-8 border border-sienna/30">
+                      {service.title.includes("Family") && (
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-sienna">
+                          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" strokeLinecap="round" strokeLinejoin="round"/>
+                          <polyline points="9 22 9 12 15 12 15 22" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                      )}
+                      {service.title.includes("Business") && (
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-sienna">
+                          <rect x="2" y="7" width="20" height="14" rx="2" ry="2" strokeLinecap="round" strokeLinejoin="round"/>
+                          <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                      )}
+                      {service.title.includes("Document") && (
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-sienna">
+                          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" strokeLinecap="round" strokeLinejoin="round"/>
+                          <polyline points="14 2 14 8 20 8" strokeLinecap="round" strokeLinejoin="round"/>
+                          <line x1="16" y1="13" x2="8" y2="13" strokeLinecap="round" strokeLinejoin="round"/>
+                          <line x1="16" y1="17" x2="8" y2="17" strokeLinecap="round" strokeLinejoin="round"/>
+                          <polyline points="10 9 9 9 8 9" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                      )}
+                    </div>
+                    
+                    <h3 className="text-2xl font-serif mb-4">{service.title}</h3>
+                    <p className="text-cream/60 text-sm leading-relaxed">
+                      {service.description}
+                    </p>
+                  </div>
+
+                  <div className="space-y-3">
+                    <div className="w-full h-px bg-white/10 mb-6" />
+                    {service.points.map((point, idx) => (
+                      <div key={idx} className="flex items-center gap-3 text-xs uppercase tracking-widest text-cream/40 group-hover:text-cream/80 transition-colors">
+                        <div className="w-1 h-1 rounded-full bg-sienna" />
+                        {point}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <CTA />
+
       <Footer />
     </main>
   );
