@@ -1,15 +1,15 @@
 "use client";
 import React from 'react';
 import Link from 'next/link';
-import { Reveal } from '../components/Reveal';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import { Reveal } from '@/components/Reveal';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { additionalServices } from './servicesData';
 
 import ServiceImage from '../../public/ServiceImages.webp'
-import CTA from '../components/CTA';
+import CTA from '@/components/CTA';
 
 const services = [
   {

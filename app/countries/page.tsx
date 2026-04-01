@@ -1,9 +1,9 @@
 "use client";
 import React from 'react';
 import Link from 'next/link';
-import { Reveal } from '../components/Reveal';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import { Reveal } from '@/components/Reveal';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 import { motion } from 'framer-motion';
 
 const AirplaneIcon = () => (
@@ -17,7 +17,7 @@ const countries = [
     id: 'australia',
     title: 'Australia',
     description: 'A land of opportunity with a high standard of living, vibrant cities, and a robust economy seeking skilled professionals.',
-    image: 'https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?auto=format&fit=crop&q=80&w=1200',
+    image: '/Australia.jpg',
     programs: [
       'Skilled Migration (189, 190, 491)',
       'Employer Sponsorship',
@@ -35,7 +35,7 @@ const countries = [
     id: 'new-zealand',
     title: 'New Zealand',
     description: 'Famed for its stunning landscapes and high quality of life, New Zealand offers a safe, peaceful environment with great career prospects.',
-    image: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&q=80&w=1200',
+    image: '/NewZealand.jpg',
     programs: [
       'Skilled Migrant Category',
       'Work to Residence',
@@ -63,7 +63,7 @@ export default function ServicesPage() {
       >
         <div className='flex flex-col md:flex-row items-center justify-center'>
           <h1 className="text-4xl md:text-5xl font-serif mb-4 uppercase tracking-[0.2em] text-start">Choose Your Destination</h1>
-          <p className=" font-sans tracking-widest uppercase text-sm text-end">Explore migration opportunities in the world's most desirable countries. We provide expert guidance for each destination.</p>
+          <p className=" font-sans tracking-widest uppercase text-sm text-end">Explore migration opportunities in the world&apos;s most desirable countries. We provide expert guidance for each destination.</p>
         </div>
         <motion.div
           initial={{ opacity: 0 }}

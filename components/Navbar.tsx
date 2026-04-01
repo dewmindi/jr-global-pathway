@@ -6,7 +6,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { LEFT_NAV_ITEMS, RIGHT_NAV_ITEMS } from '@/constants';
 
 
-
 const HamburgerIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <line x1="3" y1="12" x2="21" y2="12"></line>
@@ -22,6 +21,26 @@ const CloseIcon = () => (
   </svg>
 );
 
+type NavItem = {
+  label: string;
+  path: string;
+};
+
+const NavLinks = ({ items, className = "" }: { items: NavItem[]; className?: string }) => (
+  <div className={`flex items-center space-x-10 ${className}`}>
+    {items.map((item) => (
+      <Link
+        key={item.label}
+        href={item.path}
+        className="text-[10px] uppercase tracking-[0.3em] font-sans hover:text-sienna transition-all duration-300 relative group"
+      >
+        {item.label}
+        <span className="absolute -bottom-1 left-0 w-0 h-px bg-sienna transition-all duration-300 group-hover:w-full" />
+      </Link>
+    ))}
+  </div>
+);
+
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -33,21 +52,6 @@ const Navbar: React.FC = () => {
   }, []);
 
   const toggleMenu = () => setIsOpen(!isOpen);
-
-  const NavLinks = ({ items, className = "" }: { items: typeof LEFT_NAV_ITEMS, className?: string }) => (
-    <div className={`flex items-center space-x-10 ${className}`}>
-      {items.map((item) => (
-        <Link
-          key={item.label}
-          href={item.path}
-          className="text-[10px] uppercase tracking-[0.3em] font-sans hover:text-sienna transition-all duration-300 relative group"
-        >
-          {item.label}
-          <span className="absolute -bottom-1 left-0 w-0 h-px bg-sienna transition-all duration-300 group-hover:w-full" />
-        </Link>
-      ))}
-    </div>
-  );
 
   return (
     <>

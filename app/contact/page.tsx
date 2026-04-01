@@ -1,8 +1,8 @@
 "use client";
 import React, { useState } from 'react';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
-import { Reveal } from '../components/Reveal';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
+import { Reveal } from '@/components/Reveal';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({

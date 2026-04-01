@@ -6,8 +6,8 @@ import SmoothScrollProvider from "./providers/SmoothScrollProvider";
 
 
 import { SoundProvider } from "@/app/contexts/SoundContext";
-import SoundToggle from "@/app/components/SoundToggle";
-import RouteChangeHandler from "@/app/components/RouteChangeHandler";
+import SoundToggle from "@/components/SoundToggle";
+import RouteChangeHandler from "@/components/RouteChangeHandler";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,8 +20,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "JR Global Pathway",
-  description: "Turn your study abroad dreams into reality with JR Global Pathway - your trusted partner for seamless international education experiences.",
+  title: "JR Global Pathways",
+  description: "Turn your study abroad dreams into reality with JR Global Pathways - your trusted partner for seamless international education experiences.",
 };
 
 

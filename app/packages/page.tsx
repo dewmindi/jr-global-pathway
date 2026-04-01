@@ -1,8 +1,8 @@
 "use client";
 import React from 'react';
 import Link from 'next/link';
-import { Reveal } from '../components/Reveal';
-import Navbar from '../components/Navbar';
+import { Reveal } from '@/components/Reveal';
+import Navbar from '@/components/Navbar';
 
 const services = [
   {

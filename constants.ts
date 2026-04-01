@@ -7,6 +7,7 @@ export const LEFT_NAV_ITEMS: NavItem[] = [
 
 export const RIGHT_NAV_ITEMS: NavItem[] = [
   { label: 'Countries', path: '/countries' },
+  { label: 'Team', path: '/team' },
   // { label: 'Stories', path: '/stories' },
   { label: 'Contact', path: '/contact' },
 ];
@@ -92,14 +93,6 @@ export const SERVICES: Service[] = [
 export const DESTINATIONS: Destination[] = [
   {
     id: '1',
-    name: 'Canada',
-    image: '/Canada.jpg',
-    priceRange: 'CHF 20k+',
-    visaType: 'D-Visa',
-    span: 'md:col-span-2 md:row-span-2'
-  },
-  {
-    id: '2',
     name: 'Australia',
     image: '/Australia.jpg',
     priceRange: '€500k+',
@@ -107,37 +100,14 @@ export const DESTINATIONS: Destination[] = [
     span: 'md:col-span-1'
   },
   {
-    id: '3',
-    name: 'United Kingdom',
-    image: '/UK.jpg',
-    priceRange: '$15k+',
-    visaType: 'Express Entry',
-    span: 'md:col-span-1 md:row-span-2'
-  },
-  {
-    id: '4',
-    name: 'United States',
-    image: '/USA.jpg',
-    priceRange: '$50k+',
-    visaType: 'Employment Pass',
-    span: 'md:col-span-1'
-  },
-  {
-    id: '5',
+    id: '2',
     name: 'New Zealand',
     image: '/NewZealand.jpg',
     priceRange: '$20k+',
     visaType: 'Subclass 189',
-    span: 'md:col-span-2'
+    span: 'md:col-span-1'
   },
-    {
-    id: '6',
-    name: 'Germany',
-    image: '/Germany.jpg',
-    priceRange: '$20k+',
-    visaType: 'Subclass 189',
-    span: 'md:col-span-2'
-  }
+
 ];
 
 export const TESTIMONIALS: Testimonial[] = [

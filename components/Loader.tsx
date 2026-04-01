@@ -3,7 +3,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const Loader = () => {
-  const text = "JR Global Pathway";
+  const text = "JR Global Pathways";
   const letters = text.split("");
 
   return (

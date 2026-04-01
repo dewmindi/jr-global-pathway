@@ -1,20 +1,9 @@
 "use client";
 import React from 'react';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
-
-import JoyWinston from '../../public/JoyWinston.webp'
-import KiaraRoy from '../../public/KiaraRoy.webp'
-import RoySharan from '../../public/RoySharan.webp'
-import CTA from '../components/CTA';
-
-const team = [
-    { id: '1', name: 'Roy Sharan', role: 'Director / CEO / Founder', image: RoySharan, bio: "Strategic lead with deep expertise in migration frameworks and ethical consultancy." },
-    { id: '2', name: 'Kiara Roy', role: 'Founder & Director Operations', image: KiaraRoy, bio: "Overseeing seamless operation workflows and client success management." },
-    { id: '3', name: 'Joy Winston', role: 'Founder & Managing Director', image: JoyWinston, bio: "Driving organizational growth and long-term client partnerships globally." },
-];
+import CTA from '@/components/CTA';
 
 export const dynamic = "force-static";
 
@@ -29,7 +18,7 @@ export default function AboutPage() {
                 style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url('/JRGlobal-Hero2.webp')`, backgroundSize: 'cover', backgroundPosition: 'center' }}
             >
                 <div className='flex flex-col md:flex-row items-center justify-center max-w-7xl mx-auto'>
-                    <h1 className="text-4xl md:text-6xl font-serif mb-6 uppercase tracking-[0.2em] text-start md:w-1/2">About JR Global Pathway</h1>
+                    <h1 className="text-4xl md:text-6xl font-serif mb-6 uppercase tracking-[0.2em] text-start md:w-1/2">About JR Global Pathways</h1>
                     <p className="font-sans tracking-widest uppercase text-sm text-end md:w-1/2 opacity-80 leading-relaxed">
                         We design tailored relocation programs for discerning individuals and families — combining legal precision, bespoke planning and lifelong support.
                     </p>
@@ -110,8 +99,8 @@ export default function AboutPage() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {/* Vision Card */}
-                        <div className="group relative h-[400px] bg-white/5 border border-white/10 rounded-3xl p-10 flex flex-col justify-between hover:bg-white/10 transition-all duration-500 hover:-translate-y-2">
-                            <div className="absolute top-4 right-8 text-8xl font-serif text-white/[0.03] select-none group-hover:text-sienna/10 transition-colors">01</div>
+                        <div className="group relative h-100 bg-white/5 border border-white/10 rounded-3xl p-10 flex flex-col justify-between hover:bg-white/10 transition-all duration-500 hover:-translate-y-2">
+                            <div className="absolute top-4 right-8 text-8xl font-serif text-white/3 select-none group-hover:text-sienna/10 transition-colors">01</div>
                             <div>
                                 <div className="w-12 h-12 rounded-2xl bg-sienna/20 flex items-center justify-center mb-8 border border-sienna/30">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-sienna">
@@ -127,8 +116,8 @@ export default function AboutPage() {
                         </div>
 
                         {/* Mission Card */}
-                        <div className="group relative h-[400px] bg-white/5 border border-white/10 rounded-3xl p-10 flex flex-col justify-between hover:bg-white/10 transition-all duration-500 hover:-translate-y-2">
-                            <div className="absolute top-4 right-8 text-8xl font-serif text-white/[0.03] select-none group-hover:text-sienna/10 transition-colors">02</div>
+                        <div className="group relative h-100 bg-white/5 border border-white/10 rounded-3xl p-10 flex flex-col justify-between hover:bg-white/10 transition-all duration-500 hover:-translate-y-2">
+                            <div className="absolute top-4 right-8 text-8xl font-serif text-white/3 select-none group-hover:text-sienna/10 transition-colors">02</div>
                             <div>
                                 <div className="w-12 h-12 rounded-2xl bg-sienna/20 flex items-center justify-center mb-8 border border-sienna/30">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="text-sienna">
@@ -142,33 +131,6 @@ export default function AboutPage() {
                             </div>
                             <div className="w-full h-px bg-white/10" />
                         </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Management Team Section */}
-            <section className="py-32 px-8 md:px-20 bg-cream/5">
-                <div className="max-w-7xl mx-auto">
-                    <div className="mb-20 text-center space-y-4">
-                        <span className="text-sienna uppercase tracking-[0.4em] text-[10px] font-bold">Leadership</span>
-                        <h2 className="text-5xl md:text-6xl font-serif text-cream">The Foundation</h2>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        {team.map((m) => (
-                            <div key={m.id} className="group bg-white/5 border border-white/10 rounded-3xl p-8 flex flex-col items-center text-center hover:bg-white/10 transition-all duration-500">
-                                <div className="relative w-40 h-40 rounded-full overflow-hidden mb-8 border-2 border-sienna/30 group-hover:border-sienna transition-colors duration-500">
-                                    <Image src={m.image} alt={m.name} fill className="object-cover" />
-                                </div>
-                                <div className="space-y-2">
-                                    <span className="text-sienna text-[10px] uppercase tracking-widest">{m.role}</span>
-                                    <h4 className="text-2xl font-serif text-cream">{m.name}</h4>
-                                    <p className="text-cream/40 text-sm font-light mt-4 line-clamp-3 italic">
-                                        "{m.bio}"
-                                    </p>
-                                </div>
-                            </div>
-                        ))}
                     </div>
                 </div>
             </section>
