@@ -70,11 +70,15 @@ export default function ServicesPageClient() {
 
         <section
           className="min-h-screen flex justify-center items-center px-8 text-center bg-ebony text-cream inset-0 z-0 parallax-bg"
-          style={{
-            backgroundImage:
-              "linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url('/JRglobal-Service.webp')",
-          }}
+
         >
+          <Image
+            src="/JRglobal-Service.webp"
+            alt="Hero"
+            fill
+            priority
+            className="object-cover"
+          />
           <div className="flex flex-col md:flex-row items-center justify-center">
             <h1 className="text-4xl md:text-5xl font-serif mb-4 uppercase tracking-[0.2em] text-start">
               Our Migration Services
