@@ -22,6 +22,12 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "JR Global Pathways",
   description: "Turn your study abroad dreams into reality with JR Global Pathways - your trusted partner for seamless international education experiences.",
+
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
+  },
 };
 
 
