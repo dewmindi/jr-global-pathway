@@ -70,7 +70,7 @@ const Navbar: React.FC = () => {
               <span className={`text-xl md:text-2xl font-serif tracking-[0.15em] uppercase transition-all duration-300 ${
                 scrolled ? 'text-cream scale-90' : 'text-cream md:mix-blend-difference'
               }`}>
-                JR Global <span className="text-sienna font-light italic lowercase tracking-normal ml-1">Pathways</span>
+                JR Global <span className="text-sienna font-light italic  tracking-normal ml-1">Pathways</span>
               </span>
               <div className="h-px w-0 bg-sienna/50 transition-all duration-500 group-hover:w-full mt-1" />
             </Link>
@@ -102,6 +102,15 @@ const Navbar: React.FC = () => {
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-100 bg-[#1a1a1a] flex flex-col items-center justify-center"
           >
+            {/* Close Button */}
+            <button
+              onClick={toggleMenu}
+              className="absolute top-8 right-8 p-2 text-cream hover:text-sienna transition-colors duration-300 z-50"
+              aria-label="Close menu"
+            >
+              <CloseIcon />
+            </button>
+
             {/* Geometric Background Elements for Mobile Menu */}
             <div className="absolute top-[-10%] right-[-10%] w-75 h-75 rounded-full bg-sienna/10 blur-[100px]" />
             <div className="absolute bottom-[-5%] left-[-5%] w-62.5 h-62.5  rounded-full bg-cream/5 blur-[80px]" />
@@ -113,12 +122,28 @@ const Navbar: React.FC = () => {
                 transition={{ delay: 0.2 }}
                 className="flex flex-col items-center space-y-8"
               >
+                {/* Home Link */}
+                <motion.div
+                  initial={{ x: -20, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  transition={{ delay: 0.3 }}
+                >
+                  <Link
+                    href="/"
+                    onClick={toggleMenu}
+                    className="text-3xl font-serif text-cream hover:text-sienna transition-all duration-300 flex flex-col items-center group"
+                  >
+                    <span className="text-[10px] uppercase tracking-[0.5em] text-sienna mb-2 opacity-0 group-hover:opacity-100 transition-opacity">Start Here</span>
+                    Home
+                  </Link>
+                </motion.div>
+
                 {[...LEFT_NAV_ITEMS, ...RIGHT_NAV_ITEMS].map((item, index) => (
                   <motion.div
                     key={item.label}
                     initial={{ x: -20, opacity: 0 }}
                     animate={{ x: 0, opacity: 1 }}
-                    transition={{ delay: 0.1 * index + 0.3 }}
+                    transition={{ delay: 0.1 * index + 0.4 }}
                   >
                     <Link
                       href={item.path}

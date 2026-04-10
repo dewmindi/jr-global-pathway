@@ -7,7 +7,7 @@ const Loader = () => {
   const letters = text.split("");
 
   return (
-    <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-ebony text-cream space-y-8 overflow-hidden">
+    <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-ebony text-cream space-y-8 overflow-hidden px-4 md:px-0">
       <motion.div
         initial={{ x: "-100vw", rotate: 90 }}
         animate={{ x: "100vw", rotate: 90 }}
@@ -16,7 +16,7 @@ const Loader = () => {
       >
         <img src="/AirplaneIcon.svg" alt="Airplane Icon" width="150" height="150" />
       </motion.div>
-      <div className="flex justify-center">
+      <div className="flex justify-center px-4 md:px-0">
         {letters.map((letter, index) => (
           <motion.span
             key={index}
