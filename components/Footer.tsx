@@ -17,7 +17,9 @@ const Footer: React.FC = () => {
       </div>
       
       <div className="mt-12 text-[8px] uppercase tracking-[0.5em] text-center font-sans opacity-50">
-        Curated by Designer | Developer Dewmindi
+        <a href="https://dewmindi.com" target="_blank" rel="noopener noreferrer">
+          Curated by Designer | Developer <span className='text-amber-300'>Dewmindi</span>
+        </a>
       </div>
     </footer>
   );

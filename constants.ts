@@ -113,21 +113,21 @@ export const DESTINATIONS: Destination[] = [
 export const TESTIMONIALS: Testimonial[] = [
   {
     id: '1',
-    name: 'Alistair Sterling',
-    role: 'Tech Founder',
-    text: 'The transition to Lisbon was seamless. Elysian handled every intricate detail with the grace and precision I expect from a luxury service.'
+    name: 'James Hartley',
+    role: 'Software Engineer',
+    text: 'Relocating to Australia felt overwhelming, but JR Global Pathways made the entire visa process straightforward and stress-free. Highly recommended.'
   },
   {
     id: '2',
-    name: 'Elena Vance',
-    role: 'Art Consultant',
-    text: 'Moving to Switzerland was a dream, but the paperwork was a nightmare. Elysian turned that nightmare into a beautiful, guided journey.'
+    name: 'Priya Nair',
+    role: 'Healthcare Professional',
+    text: 'Moving to New Zealand was a lifelong dream. The team guided me through every step of the skilled migrant process with clarity and care.'
   },
   {
     id: '3',
-    name: 'Marcus Chen',
-    role: 'Investor',
-    text: 'Discretion and speed were my primary concerns. The team delivered on both fronts, securing our residency months ahead of schedule.'
+    name: 'David Lim',
+    role: 'Business Owner',
+    text: 'JR Global Pathways secured our business visa for Australia well ahead of our timeline. Their expertise and attention to detail are second to none.'
   }
 ];
 export const WHY_CHOOSE_US: WhyChooseUsItem[] = [
