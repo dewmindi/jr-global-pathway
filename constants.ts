@@ -113,19 +113,19 @@ export const DESTINATIONS: Destination[] = [
 export const TESTIMONIALS: Testimonial[] = [
   {
     id: '1',
-    name: 'James Hartley',
+    name: 'Senura Bandara',
     role: 'Software Engineer',
     text: 'Relocating to Australia felt overwhelming, but JR Global Pathways made the entire visa process straightforward and stress-free. Highly recommended.'
   },
   {
     id: '2',
-    name: 'Priya Nair',
+    name: 'Priya Acharya',
     role: 'Healthcare Professional',
     text: 'Moving to New Zealand was a lifelong dream. The team guided me through every step of the skilled migrant process with clarity and care.'
   },
   {
     id: '3',
-    name: 'David Lim',
+    name: 'Mukesh Patel',
     role: 'Business Owner',
     text: 'JR Global Pathways secured our business visa for Australia well ahead of our timeline. Their expertise and attention to detail are second to none.'
   }
